@@ -1,0 +1,102 @@
+=========================================================
+SISTEMA DE FILEIRA: Simples
+=========================================================
+
+Modelo linear:
+Equacao: y = 4492 + 10.44x
+R2 = 0.1925
+
+Modelo quadratico:
+Equacao: y = 6936.17 - 71.0322x + 0.543148x²
+R2 = 0.5676
+MET (kg/ha de N) = 65.39
+Produtividade estimada no MET (kg/ha) = 4613.79
+
+ANOVA do modelo linear:
+Analysis of Variance Table
+
+Response: PROD
+          Df  Sum Sq Mean Sq F value Pr(>F)
+ADU        1  490471  490471  0.4768 0.5613
+Residuals  2 2057514 1028757               
+
+ANOVA do modelo quadratico:
+Analysis of Variance Table
+
+Response: PROD
+          Df  Sum Sq Mean Sq F value Pr(>F)
+ADU        1  490471  490471  0.4452 0.6254
+I(ADU^2)   1  955832  955832  0.8676 0.5226
+Residuals  1 1101682 1101682               
+
+Resumo do modelo quadratico:
+
+Call:
+lm(formula = PROD ~ ADU + I(ADU^2), data = sub)
+
+Residuals:
+     1      2      3      4 
+-234.7  704.1 -704.1  234.7 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)
+(Intercept) 6936.1667  2921.9914   2.374    0.254
+ADU          -71.0322    88.8560  -0.799    0.571
+I(ADU^2)       0.5431     0.5831   0.931    0.523
+
+Residual standard error: 1050 on 1 degrees of freedom
+Multiple R-squared:  0.5676,	Adjusted R-squared:  -0.2971 
+F-statistic: 0.6564 on 2 and 1 DF,  p-value: 0.6576
+
+
+=========================================================
+SISTEMA DE FILEIRA: Duplas
+=========================================================
+
+Modelo linear:
+Equacao: y = 7384.17 - 23.6611x
+R2 = 0.5177
+
+Modelo quadratico:
+Equacao: y = 4578.75 + 69.8528x - 0.623426x²
+R2 = 0.7764
+MET (kg/ha de N) = 56.02
+Produtividade estimada no MET (kg/ha) = 6535.44
+
+ANOVA do modelo linear:
+Analysis of Variance Table
+
+Response: PROD
+          Df  Sum Sq Mean Sq F value Pr(>F)
+ADU        1 2519317 2519317  2.1465 0.2805
+Residuals  2 2347369 1173685               
+
+ANOVA do modelo quadratico:
+Analysis of Variance Table
+
+Response: PROD
+          Df  Sum Sq Mean Sq F value Pr(>F)
+ADU        1 2519317 2519317  2.3153 0.3701
+I(ADU^2)   1 1259258 1259258  1.1573 0.4768
+Residuals  1 1088111 1088111               
+
+Resumo do modelo quadratico:
+
+Call:
+lm(formula = PROD ~ ADU + I(ADU^2), data = sub)
+
+Residuals:
+     1      2      3      4 
+-233.3  699.8 -699.8  233.2 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)
+(Intercept) 4578.7500  2903.9391   1.577    0.360
+ADU           69.8528    88.3070   0.791    0.574
+I(ADU^2)      -0.6234     0.5795  -1.076    0.477
+
+Residual standard error: 1043 on 1 degrees of freedom
+Multiple R-squared:  0.7764,	Adjusted R-squared:  0.3292 
+F-statistic: 1.736 on 2 and 1 DF,  p-value: 0.4728
+
+
